@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body style="background-color: black; color: wheat;">
+    <div class="container">
+        <ul class="language">
+            <li>javaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("java")
+    function addLang(lang){
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(list)
+    }
+    addLang("c++")
+    const second = document.querySelector("li:nth-child(2)");
+    console.log(second)
+    const newEle = document.createElement('li')
+    newEle.textContent = "SQL"
+    second.replaceWith(newEle)
+    const first = document.querySelector("li:nth-child(1)");
+    const newFirst = document.createElement("li")
+    newFirst.textContent = "PostgreSql"
+    first.replaceWith(newFirst)
+    const firstProp = document.querySelector("li:first-child")
+    firstProp.outerHTML = '<li>TypeScript<li/>'
+</script>
+</html>

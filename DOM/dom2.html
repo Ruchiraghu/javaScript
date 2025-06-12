@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+</head>
+<style>
+    .heading{
+        color: aliceblue;
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+    .day{
+        font-size: large;
+        font-style: italic;
+        
+    }
+</style>
+<body style="background-color:black ; color: cadetblue;">
+    <h2 class="heading">WEEK DAYS</h2>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">fri</div>
+        <div class="day">sat</div>
+        <div class="day">sun</div>
+    </div>
+</body>
+<script>
+    // const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // for(let i =0;i<=parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random()*10+1);
+    div.setAttribute("title","title is generated")
+    div.style.backgroundColor = "orange"
+    div.innerText = "coffee with karan"
+    const textAdd = document.createTextNode("chai or code");
+    console.log(textAdd);
+    div.appendChild(textAdd)
+</script>
+</html>
